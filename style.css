@@ -1,0 +1,491 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'PT Sans', sans-serif;
+    background: #f3f3ee;
+    color: #343a40;
+}
+
+h1, h2, h3{
+    font-family: 'PT Serif', serif;
+}
+main h1, h2{
+    background: #b5b569;
+}
+
+
+header {
+    display: grid;
+    grid-template:
+        "logo logo"100px 
+        "registration login" 50px/1fr 1fr;
+    grid-gap: 10px;
+    margin: 0 0 10px 0;
+}
+
+header #logo {
+    display: flex;
+    grid-area: logo;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+}
+
+header #registration {
+    display: flex;
+    grid-area: registration;
+    justify-content: center;
+    align-items: center;
+    background: #b5a869;
+}
+
+header #login {
+    display: flex;
+    grid-area: login;
+    justify-content: center;
+    align-items: center;
+    background: #b5a869;
+}
+header #registration a, header #login a{
+    text-decoration: none;
+    color: #fffced;
+}
+
+
+header p, #description p {
+    padding: 15px;
+    line-height: 2rem;
+    color: black;
+}
+
+
+#newItemsQuery h2, #searchItems h2 {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 1rem;
+    
+}
+
+#description {
+    background: white;
+    margin: 0 8px 10px  8px;
+    min-height: 414px;
+    height: 800px;
+    background-image: url(images/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 10px;
+}
+.description__text{
+    background-color: rgba(255, 255, 255, 0.8);
+}
+#description h2{
+    font-size: 25px;
+    padding: 1rem;
+    font-weight: 700;
+    padding-top: 2rem;
+    background-color: rgba(255, 255, 255, 0.4);
+
+}
+
+
+
+
+
+#searchItemsWrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 10px;
+    margin: 10px;
+}
+
+.main__searchItems__form {
+    display: flex;
+    align-items: center;
+}
+
+.main__searchItems__form label{
+width: 80px;
+}
+
+
+.main__searchItems__form form {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+}
+
+.main__searchItems__form form input[type="text"] {
+    width: 100%;
+    height: 50px;
+    padding-left: 10px;
+}
+
+.main__searchItems__form form input[type="submit"] {
+    height: 50px;
+    width: 100px;
+}
+
+.main__searchItems__form form .rightForm {
+    display: flex;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+#newItemQueryList{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 10px;
+    padding: 10px;
+}
+.main__newItemsQuery__newItem{
+background: white;
+padding: 15px;
+justify-content: center;
+}
+
+.main__newItemsQuery__newItem img{
+max-width: 270px;
+}
+
+@media only screen and (min-width: 1366px) {
+    #newItemQueryList{
+        display: grid;
+        grid-template-columns: repeat(4, minmax(300px, 1fr));
+        grid-gap: 10px;
+        padding: 10px;
+    }
+  }
+
+
+
+#userArea{
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 0 5px 0;
+    padding: 10px;
+    background: lightgoldenrodyellow;
+}
+#userArea > *{
+    width: 100%;
+}
+#userArea li, p{
+    line-height: 1.4rem;
+}
+
+
+
+#itemList{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+
+table{
+    width: 100%;
+    font-size: 14px;
+}
+
+
+.itemLegend th, .item td{
+    padding: 10px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+@media only screen and (max-width: 360px) {
+    .itemLegend th, .item td{
+        padding: 10px 0 10px 0;
+        vertical-align: middle;
+        text-align: center;
+        font-size: 12px;
+    }
+    .item a{
+        padding: 10px;
+    }
+  }
+
+
+.itemLegend th{
+    background: #b5b569;
+    padding: 15px 0 15px 0;
+}
+
+tr:nth-child(odd){
+    background: #fffffb;
+}
+tr:nth-child(even){
+    background: #fafad2;
+}
+#itemList tr:hover {background-color:#d7d79b;}
+
+
+
+
+
+
+
+
+
+
+
+.loginForm{
+    display: flex;
+    justify-content: center;
+}
+.loginForm form{
+    display: flex;
+    flex-flow: column wrap;
+    width: 300px;
+}
+.loginForm input, .loginForm button{
+    height: 50px;
+    padding: 10px;
+    margin: 10px 0 0 0;
+}
+
+
+.regForm{
+    display: flex;
+    justify-content: center;
+}
+.regForm form{
+    display: flex;
+    flex-flow: column wrap;
+    width: 300px;
+}
+.regForm input, .loginForm button{
+    height: 50px;
+    padding: 10px;
+    margin: 10px 0 0 0;
+}
+
+
+
+
+.itemAddForm, .itemUpdateForm{
+    display: flex;
+    justify-content: center;
+}
+.itemAddForm form, .itemUpdateForm form{
+    display: flex;
+    flex-flow: column wrap;
+    width: 300px;
+}
+.itemAddForm input, .loginForm button, .itemUpdateForm input{
+    height: 50px;
+    padding: 10px;
+    margin: 10px 0 0 0;
+}
+.inputfile{
+    background: white;
+    border: 1px solid gray;
+}
+.itemUpdateForm input[type=submit].deleteButton{
+    margin-top: 100px;
+    background: darkred;
+    color: white;
+    border: 1px solid red;
+}
+
+
+img.detailImage{
+    width:100%;
+    max-width: 800px;
+}
+
+
+
+
+
+
+.itemDetailWrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 10px;
+}
+.itemDetail{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.itemDetail .itemLegend, .itemDetail .item{
+    width: 50%;
+    padding: 5px;
+    display: flex;
+    flex-flow: column;
+}
+
+.itemDetail span{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin: 5px;
+    background: white;
+    height: 50px;
+}
+
+
+
+footer{
+    margin-top: 300px;
+}
+footer ul{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background: #b5b569;
+}
+footer li{
+    padding: 50px;
+}
+.loginError{
+    display: flex;
+    justify-content: center;
+    color: red;
+    padding: 30px;
+}
